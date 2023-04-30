@@ -1,0 +1,31 @@
+body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* background-color: yellow; */
+}
+
+span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+canvas {
+  border: 5px solid #2d9bf0;
+}
+
+#infoBoard {
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+#snakeBoard {
+  background-color: #000101;
+}
