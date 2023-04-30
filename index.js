@@ -73,7 +73,7 @@ let wall1 = {
     x: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
     y: [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20],
   },
-  color: "black",
+  color: "white",
 };
 
 let wall2 = {
@@ -81,7 +81,7 @@ let wall2 = {
     x: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
     y: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
   },
-  color: "black",
+  color: "white",
 };
 
 let wall3 = {
@@ -89,7 +89,7 @@ let wall3 = {
     x: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
     y: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
   },
-  color: "black",
+  color: "white",
 };
 
 let wall4 = {
@@ -97,7 +97,7 @@ let wall4 = {
     x: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
     y: [25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25],
   },
-  color: "black",
+  color: "white",
 };
 
 //sound-effect
@@ -130,14 +130,14 @@ function drawLevel(context, snake) {
     MOVE_INTERVAL = speed;
   } else if (snake.score < 10) {
     lv = "2";
-    MOVE_INTERVAL = speed - 20;
+    MOVE_INTERVAL = speed + 20;
 
     for (let i = 0; i < wall1.position.x.length; i++) {
       drawObstacle(context, wall1.position.x[i], wall1.position.y[i], wall1.color);
     }
   } else if (snake.score < 15) {
     lv = "3";
-    MOVE_INTERVAL = speed - 40;
+    MOVE_INTERVAL = speed + 40;
 
     for (let i = 0; i < wall1.position.x.length; i++) {
       drawObstacle(context, wall1.position.x[i], wall1.position.y[i], wall1.color);
@@ -148,7 +148,7 @@ function drawLevel(context, snake) {
     }
   } else if (snake.score < 20) {
     lv = "4";
-    MOVE_INTERVAL = speed - 60;
+    MOVE_INTERVAL = speed + 60;
 
     for (let i = 0; i < wall1.position.x.length; i++) {
       drawObstacle(context, wall1.position.x[i], wall1.position.y[i], wall1.color);
@@ -163,7 +163,7 @@ function drawLevel(context, snake) {
     }
   } else if (snake.score >= 20) {
     lv = "5";
-    MOVE_INTERVAL = speed - 80;
+    MOVE_INTERVAL = speed + 80;
 
     for (let i = 0; i < wall1.position.x.length; i++) {
       drawObstacle(context, wall1.position.x[i], wall1.position.y[i], wall1.color);
